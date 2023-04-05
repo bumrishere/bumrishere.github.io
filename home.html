@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candy Store</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="loading-screen">
+		<h1>Loading...</h1>
+	</div>
+	<header>
+		<h1>Candy Store</h1>
+		<a href="#" id="login-icon"><img src="login-icon.png" alt="Login Icon"></a>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Candies</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<div id="login-screen">
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+			<input type="submit" value="Login">
+		</form>
+		<a href="#" id="close-login">Close</a>
+	</div>
+	<div id="main-content">
+		<section>
+			<h2>Welcome to our Candy Store!</h2>
+			<p>We have a wide selection of delicious candies for you to choose from.</p>
+			<p>Take a look at our menu and place an order today!</p>
+			<a href="#" class="button">See our Candies</a>
+		</section>
+		<footer>
+			<p>&copy; 2023 Candy Store. All rights reserved.</p>
+		</footer>
+	</div>
+	<script>
+		window.addEventListener("load", function() {
+			document.getElementById("loading-screen").style.display = "none";
+			document.getElementById("main-content").style.display = "block";
+		});
+
+		document.getElementById("login-icon").addEventListener("click", function() {
+			document.getElementById("login-screen").style.display = "block";
+		});
+
+		document.getElementById("close-login").addEventListener("click", function() {
+			document.getElementById("login-screen").style.display = "none";
+		});
+	</script>
+</body>
+</html>
